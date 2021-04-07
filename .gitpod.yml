@@ -3,5 +3,5 @@ image:
 ports:
   - port: 19000-19002
 tasks:
-  - before: cd my-app && npm install
-    command: expor start --tunnel
+  - before: npm install
+    command: expo start --tunnel

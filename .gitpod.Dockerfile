@@ -3,6 +3,8 @@ FROM gitpod/workspace-full-vnc
 USER gitpod
 
 RUN npm install expo-cli --global
+
+RUN npm install ngrok --global
 # Install custom tools, runtimes, etc.
 # For example "bastet", a command-line tetris clone:
 # RUN brew install bastet

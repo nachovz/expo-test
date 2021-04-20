@@ -1,9 +1,10 @@
 {
-  "name": "my-app",
-  "displayName": "my-app",
+  "name": "pto-genius",
+  "displayName": "PTO Genius",
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+		"owner":"ptogenius",
+    "name": "pto-genius",
+    "slug": "pto-genius",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

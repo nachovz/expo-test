@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, Alert, Image, TextInput, SafeAreaView } from "react-native";
-import TextButton from "@/TextButton/TextButton";
-import Button from "@/Button/Button";
-import colors from "assets/styles/colors.json";
+import TextButton from "../components/TextButton/TextButton";
+import Button from "../components/Button/Button";
+import colors from "../assets/styles/colors.json";
 
 const styles = StyleSheet.create({
 	container: {
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 	}
 })
 
-const Login = function () {
+const Login = function ({ navigation }) {
 	const [phone, onChangePhone] = React.useState("Phone Number");
 
 	const _onPressButton = function() {
@@ -111,6 +111,7 @@ const Login = function () {
 					</View>
 				</View>
 				<Text style={{marginTop: 20, color: colors['color-bg-light-border']}}>Copyright © 2020 PTO Genius</Text>
+				<Button title="storybook" onPress={() => navigation.navigate('Storybook')}/>
 			</View>
 		</SafeAreaView>
 	)

@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import colors from "/assets/styles/colors.json";
+import colors from "../../assets/styles/colors.json";
 
 const TextButton = function ({
 	text='Click me',

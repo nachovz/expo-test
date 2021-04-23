@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 
 import LoginScreen from "./screens/login";
+import Storybook from "./screens/storybook";
 
 import styless from "./assets/styles/app.styl";
 import colors from "./assets/styles/colors.json";
@@ -76,6 +77,10 @@ export default function App() {
 					name="Login" 
 					options={{headerShown:false}} 
 					component={LoginScreen}
+				/>
+				<Stack.Screen
+					name="Storybook"
+					component={Storybook}
 				/>
       </Stack.Navigator>
 			<StatusBar style="auto" />

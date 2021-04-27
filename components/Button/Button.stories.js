@@ -1,22 +1,16 @@
-import * as React from 'react';
-import { View } from 'react-native';
-//import { styles } from '../constants/globalStyles';
-import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
-import Button from './Button';
-export const task = {
-  id: '1',
-  title: 'Test Task',
-  state: 'TASK_INBOX',
-  updatedAt: new Date(2018, 0, 1, 9, 0),
-};
+import { text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react-native';
+import React from 'react';
+import { Text } from 'react-native';
+import Button from '@/Button/Button';
+import CenterView from '@/CenterView';
 
-/*export const actions = {
-  onPinTask: action('onPinTask'),
-  onArchiveTask: action('onArchiveTask'),
-};*/
 storiesOf('Button', module)
-  //.addDecorator(story => <View style={styles.TaskBox}>{story()}</View>)
-  .add('default', () => <Button title="Click Me" />)
-  /*.add('pinned', () => <Task task={{ ...task, state: 'TASK_PINNED' }} {...actions} />)
-  .add('archived', () => <Task task={{ ...task, state: 'TASK_ARCHIVED' }} {...actions} />)*/;
+  .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
+	.add('with text', () => (
+    <Button onPress={action('clicked-text')} title={text('Button text', 'Hello Button')}/>
+  ))
+  .add('with some emoji', () => (
+    <Button onPress={action('clicked-emoji')} title="😀 😎 👍 💯"/>
+  ));

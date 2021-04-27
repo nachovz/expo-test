@@ -110,8 +110,8 @@ const Login = function ({ navigation }) {
 						<Text style={{alignSelf: 'center', marginTop: 10}}>Don't have an account? <Text style={{color: colors['color-primary'], textDecorationLine: 'underline'}}>Sign up</Text></Text>
 					</View>
 				</View>
-				<Text style={{marginTop: 20, color: colors['color-bg-light-border']}}>Copyright © 2020 PTO Genius</Text>
-				<Button title="storybook" onPress={() => navigation.navigate('Storybook')}/>
+				<Text style={{marginTop: 20, color: colors['color-bg-light-border']}}>Copyright © 2020 PTO Genius. v0.0.1</Text>
+				{__DEV__ && <Button title="storybook" onPress={() => navigation.navigate('Storybook')}/>}
 			</View>
 		</SafeAreaView>
 	)

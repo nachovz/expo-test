@@ -8,7 +8,8 @@
     "test": "jest",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
-    "build-static-webapp": "expo build:web"
+    "build-static-webapp": "expo build:web",
+    "prestorybook": "rnstl"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
@@ -21,6 +22,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "~0.63.4",
+    "react-native-dev-menu": "^4.0.2",
     "react-native-gesture-handler": "~1.8.0",
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
@@ -45,12 +47,21 @@
     "postcss-css-variables": "^0.17.0",
     "postcss-load-config": "^3.0.1",
     "react-native-postcss-transformer": "^1.2.4",
+    "react-native-storybook-loader": "^2.0.3",
     "react-native-stylus-transformer": "^1.2.0",
     "react-test-renderer": "~16.13.1",
     "stylus": "^0.54.8"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./components"
+      ],
+      "pattern": "**/*.stories.js"
+    }
   },
   "private": true
 }
